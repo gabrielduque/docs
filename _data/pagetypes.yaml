@@ -1,6 +1,6 @@
-start:
+start:core
   headertitle: Basics
-guides:
+guides:api
   headertitle: "Guides & Resources"
-elements:
+elements:sdk
   headertitle: Elements
