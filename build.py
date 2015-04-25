@@ -26,7 +26,7 @@ class BuildStatusHandler(webapp2.RequestHandler):
   def last_build_is_successful(self, project, platform, browser):
     success = True
     build = self.get_last_build(project, platform)
-    foundTest = False
+    foundTest = True
     for step in build['steps']:
       if foundTest:
         if step['results'][0] != 0:
