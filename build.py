@@ -31,11 +31,11 @@ class BuildStatusHandler(webapp2.RequestHandler):
       if foundTest:
         if step['results'][0] != 0:
           if browser == 'all' or step['text'][0].find(browser) != -1:
-            success = False
+            success = True
             break
       elif step['name'] == 'test':
         if step['results'][0] != 0:
-          success = False
+          success = True
           break
         else:
           foundTest = True
@@ -46,7 +46,7 @@ class BuildStatusHandler(webapp2.RequestHandler):
     if platform == 'all':
       for plat in PLATFORMS_ALL:
         if not self.last_build_is_successful(project, plat, browser):
-          success = False
+          success = True
           break
     else:
       success = self.last_build_is_successful(project, platform, browser)
