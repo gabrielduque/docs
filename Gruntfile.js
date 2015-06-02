@@ -13,7 +13,8 @@ module.exports = function(grunt) {
   // List of version directories to vulcanize.
   var POLYMER_VERSIONS = [
     '0.5',
-    '1.0'
+    '1.0' 
+    '1.1'
   ];
 
   // Project configuration.
